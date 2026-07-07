@@ -1,29 +1,36 @@
 output "vpc_id" {
-  description = "O ID da VPC criada"
-  value       = aws_vpc.main.id
+  value = aws_vpc.main.id
 }
 
-output "vpc_cidr_block" {
-  description = "O bloco CIDR principal da VPC"
-  value       = aws_vpc.main.cidr_block
+output "vpc_cidr" {
+  value = aws_vpc.main.cidr_block
+}
+
+
+output "internet_gateway_id" {
+  value = aws_internet_gateway.igw.id
 }
 
 output "public_subnet_ids" {
-  description = "Lista com os IDs de todas as subnets públicas"
-  value       = aws_subnet.public[*].id
+  value = aws_subnet.public[*].id
+}
+
+output "public_route_table_id" {
+  value = aws_route_table.public_internet_access.id
+}
+
+output "nat_gateway_ids" {
+  value = aws_nat_gateway.main[*].id
 }
 
 output "private_subnet_ids" {
-  description = "Lista com os IDs de todas as subnets privadas (onde rodam os nodes/pods)"
-  value       = aws_subnet.private[*].id
+  value = aws_subnet.private[*].id
 }
 
 output "database_subnet_ids" {
-  description = "Lista com os IDs de todas as subnets de banco de dados"
-  value       = aws_subnet.database[*].id
+  value = aws_subnet.database[*].id
 }
 
-output "database_subnet_group_name" {
-  description = "O nome do Subnet Group de banco de dados gerado para o RDS"
-  value       = try(aws_db_subnet_group.database[0].name, "")
+output "database_nacl_id" {
+  value = aws_network_acl.database.id
 }

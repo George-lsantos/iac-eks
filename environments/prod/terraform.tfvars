@@ -1,21 +1,54 @@
-project_name = "VPC-eks"
-region       = "us-east-1"
-vpc_cidr     = "10.1.0.0/16"
+project_name    = "iac-eks"
 
-# Range secundário de CGNAT para os Pods do EKS (Mantido, pois é um bloco secundário associado à VPC)
-vpc_additional_cidrs = ["100.64.0.0/16"]
+vpc_name        = "network-prod"
+eks_cluster_name = "eks-prod"
+
+region = "us-east-1"
+
+vpc_cidr = "10.1.0.0/16"
+
+vpc_additional_cidrs = [
+  "10.2.0.0/16"
+]
 
 public_subnets = [
-  { name = "cerebro-pub-1a", cidr = "10.1.1.0/24", availability_zone = "us-east-1a" },
-  { name = "cerebro-pub-1b", cidr = "10.1.2.0/24", availability_zone = "us-east-1b" }
+  {
+    name              = "public-1a"
+    cidr              = "10.1.1.0/24"
+    availability_zone = "us-east-1a"
+  },
+  {
+    name              = "public-1b"
+    cidr              = "10.1.2.0/24"
+    availability_zone = "us-east-1b"
+  }
 ]
 
 private_subnets = [
-  { name = "cerebro-pvt-1a", cidr = "10.1.10.0/24", availability_zone = "us-east-1a" },
-  { name = "cerebro-pvt-1b", cidr = "10.1.11.0/24", availability_zone = "us-east-1b" }
+  {
+    name              = "private-1a"
+    cidr              = "10.1.10.0/24"
+    availability_zone = "us-east-1a"
+  },
+  {
+    name              = "private-1b"
+    cidr              = "10.1.20.0/24"
+    availability_zone = "us-east-1b"
+  }
 ]
 
 database_subnets = [
-  { name = "cerebro-db-1a", cidr = "10.1.20.0/24", availability_zone = "us-east-1a" },
-  { name = "cerebro-db-1b", cidr = "10.1.21.0/24", availability_zone = "us-east-1b" }
+
+  {
+    name              = "vpc-database_subnets-1a"
+    cidr              = "10.1.51.0/24"
+    availability_zone = "us-east-1a"
+  },
+  {
+    name              = "vpc-database_subnets-1b"
+    cidr              = "10.1.52.0/24"
+    availability_zone = "us-east-1b"
+  }
 ]
+
+k8s_version = "1.33"
