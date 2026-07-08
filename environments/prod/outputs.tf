@@ -34,6 +34,23 @@ output "database_nacl_id" {
   value = module.network.database_nacl_id
 }
 
+output "public_nacl_id" {
+  value = module.network.public_nacl_id
+}
+
+output "private_nacl_id" {
+  value = module.network.private_nacl_id
+}
+
+output "pod_subnet_ids" {
+  value = module.network.pod_subnet_ids
+}
+
+# Consumido pela camada environments/prod-addons (ENIConfig por AZ)
+output "pod_subnets_by_az" {
+  value = module.network.pod_subnets_by_az
+}
+
 ######IAM
 output "cluster_role_arn" {
   value = module.iam.cluster_role_arn
@@ -50,6 +67,12 @@ output "cluster_name" {
 
 output "cluster_endpoint" {
   value = module.eks.cluster_endpoint
+}
+
+# Consumido pela camada environments/prod-addons (provider kubernetes
+# e security group do ENIConfig)
+output "cluster_security_group_id" {
+  value = module.eks.cluster_security_group_id
 }
 
 output "node_group_name" {

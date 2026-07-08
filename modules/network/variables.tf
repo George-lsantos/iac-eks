@@ -38,3 +38,13 @@ variable "database_subnets" {
   }))
 }
 
+# Subnets dedicadas aos pods, usando o CIDR secundário da VPC
+# (ex.: 100.64.0.0/16), para o padrão de custom networking do EKS.
+variable "pod_subnets" {
+  type = list(object({
+    name              = string
+    cidr              = string
+    availability_zone = string
+  }))
+  default = []
+}

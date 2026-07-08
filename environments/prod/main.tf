@@ -7,6 +7,7 @@ module "network" {
   public_subnets       = var.public_subnets
   private_subnets      = var.private_subnets
   database_subnets     = var.database_subnets
+  pod_subnets          = var.pod_subnets
 }
 
 module "iam" {
@@ -26,4 +27,7 @@ module "eks" {
   node_role_arn    = module.iam.node_role_arn
 
   private_subnet_ids = module.network.private_subnet_ids
+  pod_subnets_by_az  = module.network.pod_subnets_by_az
+
+  admin_principal_arns = var.admin_principal_arns
 }

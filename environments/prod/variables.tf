@@ -3,15 +3,6 @@ variable "project_name" {
   type = string
 }
 
-variable "vpc_name" {
-  type = string
-}
-
-variable "eks_cluster_name" {
-  type = string
-}
-
-
 variable "region" {
   type = string
 }
@@ -49,6 +40,20 @@ variable "database_subnets" {
   }))
 }
 
+variable "pod_subnets" {
+  type = list(object({
+    name              = string
+    cidr              = string
+    availability_zone = string
+  }))
+  default = []
+}
+
 variable "k8s_version" {
   type = string
+}
+
+variable "admin_principal_arns" {
+  type    = list(string)
+  default = []
 }

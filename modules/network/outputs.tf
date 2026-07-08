@@ -34,3 +34,24 @@ output "database_subnet_ids" {
 output "database_nacl_id" {
   value = aws_network_acl.database.id
 }
+
+output "public_nacl_id" {
+  value = aws_network_acl.public.id
+}
+
+output "private_nacl_id" {
+  value = aws_network_acl.private.id
+}
+
+output "pod_subnet_ids" {
+  value = aws_subnet.pods[*].id
+}
+
+# Mapa AZ => subnet_id, usado pelo módulo eks para criar um
+# ENIConfig por zona de disponibilidade.
+output "pod_subnets_by_az" {
+  value = {
+    for idx, s in var.pod_subnets :
+    s.availability_zone => aws_subnet.pods[idx].id
+  }
+}
