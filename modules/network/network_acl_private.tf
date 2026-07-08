@@ -13,37 +13,37 @@ resource "aws_network_acl" "private" {
 # pública/NAT.
 resource "aws_network_acl_rule" "private_ingress_primary_cidr" {
   network_acl_id = aws_network_acl.private.id
-  rule_number     = 100
-  egress          = false
-  protocol        = "-1"
-  rule_action     = "allow"
-  cidr_block      = var.vpc_cidr
-  from_port       = 0
-  to_port         = 0
+  rule_number    = 100
+  egress         = false
+  protocol       = "-1"
+  rule_action    = "allow"
+  cidr_block     = var.vpc_cidr
+  from_port      = 0
+  to_port        = 0
 }
 
 resource "aws_network_acl_rule" "private_ingress_additional_cidrs" {
   count = length(var.vpc_additional_cidrs)
 
   network_acl_id = aws_network_acl.private.id
-  rule_number     = 110 + count.index
-  egress          = false
-  protocol        = "-1"
-  rule_action     = "allow"
-  cidr_block      = var.vpc_additional_cidrs[count.index]
-  from_port       = 0
-  to_port         = 0
+  rule_number    = 110 + count.index
+  egress         = false
+  protocol       = "-1"
+  rule_action    = "allow"
+  cidr_block     = var.vpc_additional_cidrs[count.index]
+  from_port      = 0
+  to_port        = 0
 }
 
 resource "aws_network_acl_rule" "private_egress_all" {
   network_acl_id = aws_network_acl.private.id
-  rule_number     = 100
-  egress          = true
-  protocol        = "-1"
-  rule_action     = "allow"
-  cidr_block      = "0.0.0.0/0"
-  from_port       = 0
-  to_port         = 0
+  rule_number    = 100
+  egress         = true
+  protocol       = "-1"
+  rule_action    = "allow"
+  cidr_block     = "0.0.0.0/0"
+  from_port      = 0
+  to_port        = 0
 }
 
 resource "aws_network_acl_association" "private" {

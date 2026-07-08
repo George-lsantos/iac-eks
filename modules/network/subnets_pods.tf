@@ -4,9 +4,13 @@ resource "aws_subnet" "pods" {
   cidr_block        = var.pod_subnets[count.index].cidr
   availability_zone = var.pod_subnets[count.index].availability_zone
 
+
   tags = {
     Name = var.pod_subnets[count.index].name
+
+    "kubernetes.io/cluster/${var.project_name}" = "shared"
   }
+
 
   depends_on = [
     aws_vpc_ipv4_cidr_block_association.main

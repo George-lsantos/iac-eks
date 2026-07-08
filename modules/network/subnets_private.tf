@@ -6,6 +6,9 @@ resource "aws_subnet" "private" {
 
   tags = {
     Name = var.private_subnets[count.index].name
+
+    "kubernetes.io/role/internal-elb"           = "1"
+    "kubernetes.io/cluster/${var.project_name}" = "shared"
   }
 
   depends_on = [
