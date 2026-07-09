@@ -1,0 +1,139 @@
+i-053886a533f021fbe	[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[2J[01;01H[=3h[2J[01;01H[0m[35m[40m[2J[01;01H[=3h[2J[01;01H[0m[37m[40m  Booting `Amazon Linux (6.12.92-122.166.amzn2023.x86_64) 2023'
+
+[    0.036553] RETBleed: WARNING: Spectre v2 mitigation leaves CPU vulnerable to RETBleed attacks, data leaks possible!
+[    3.606479] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    3.614853] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12
+[    3.616255] i8042: Warning: Keylock active
+[    3.618407] ena 0000:00:05.0: Elastic Network Adapter (ENA) v2.17.0g
+[    3.620071] RPC: Registered named UNIX socket transport module.
+[    3.620919] RPC: Registered udp transport module.
+[    3.621609] RPC: Registered tcp transport module.
+[    3.622286] RPC: Registered tcp-with-tls transport module.
+[    3.623066] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    3.633881] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    3.634635] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    3.643877] ena 0000:00:05.0: ENA device version: 0.10
+[    3.644688] ena 0000:00:05.0: ENA controller version: 0.0.1 implementation version 1
+[    3.646339] ACPI: button: Power Button [PWRF]
+[    3.647077] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    3.667407] ACPI: button: Sleep Button [SLPF]
+[    3.743845] ena 0000:00:05.0: LLQ is not supported Fallback to host mode policy.
+[    3.757446] ena 0000:00:05.0: Elastic Network Adapter (ENA) found at mem 80400000, mac addr 02:4d:97:4b:b2:e7
+[    3.819614] ena 0000:00:05.0 ens5: renamed from eth0
+[    3.905492] zram_generator::config[1863]: zram0: system has too much memory (911MB), limit is 800MB, ignoring.
+[    4.024990] nvme nvme0: using unchecked data buffer
+[    6.224875] nodeadm-internal[1974]: info boot-book/hook.go:58 Waiting for consistent network interfaces..
+[    6.285938] nodeadm-internal[1974]: info system/networking.go:83 checking link states...
+[    6.294914] nodeadm-internal[1974]: info system/networking.go:119 secondary link unmanaged {"linkName": "lo"}
+[    6.297270] nodeadm-internal[1974]: info system/networking.go:109 link configured {"linkName": "ens5"}
+[    6.299368] nodeadm-internal[1974]: info boot-book/hook.go:62 Completed boot hook!
+[    7.027951] nodeadm[1988]: info init/init.go:55 Checking user is root..
+[    7.029673] nodeadm[1988]: info init/init.go:65 Loading configuration.. {"configSource": ["imds://user-data"], "configCache": "/run/eks/nodeadm/config.json"}
+[    7.032956] nodeadm[1988]: warn cli/config.go:25 failed to load cached config {"error": "open /run/eks/nodeadm/config.json: no such file or directory"}
+[    7.045674] nodeadm[1988]: info init/init.go:75 Setting up nodeadm environment aspect...
+[    7.047527] nodeadm[1988]: info init/init.go:84 Enriching configuration..
+[    7.049105] nodeadm[1988]: info init/init.go:164 Fetching kubelet version..
+[    7.056510] nodeadm[1988]: info kubelet/version.go:30 Reading kubelet version from file {"path": "/etc/eks/kubelet-version.txt"}
+[    7.063382] nodeadm[1988]: info init/init.go:170 Fetched kubelet version {"version": "v1.33.13"}
+[    7.065605] nodeadm[1988]: info init/init.go:171 Fetching instance details..
+[    7.096495] nodeadm[1988]: SDK 2026/07/09 19:09:58 DEBUG attempting waiter request, attempt count: 1
+[   38.673172] nodeadm[1988]: SDK 2026/07/09 19:10:29 DEBUG retrying request EC2/DescribeInstances, attempt 2
+[   69.788562] nodeadm[1988]: SDK 2026/07/09 19:11:01 DEBUG retrying request EC2/DescribeInstances, attempt 3
+[  101.690430] nodeadm[1988]: SDK 2026/07/09 19:11:32 DEBUG retrying request EC2/DescribeInstances, attempt 4
+[  138.825211] nodeadm[1988]: SDK 2026/07/09 19:12:10 DEBUG retrying request EC2/DescribeInstances, attempt 5
+[  188.858412] nodeadm[1988]: SDK 2026/07/09 19:13:00 DEBUG retrying request EC2/DescribeInstances, attempt 6
+[  238.882957] nodeadm[1988]: SDK 2026/07/09 19:13:50 DEBUG retrying request EC2/DescribeInstances, attempt 7
+[  288.884043] nodeadm[1988]: SDK 2026/07/09 19:14:40 DEBUG retrying request EC2/DescribeInstances, attempt 8
+[  338.884647] nodeadm[1988]: SDK 2026/07/09 19:15:30 DEBUG retrying request EC2/DescribeInstances, attempt 9
+[  388.910470] nodeadm[1988]: SDK 2026/07/09 19:16:20 DEBUG retrying request EC2/DescribeInstances, attempt 10
+[  438.933970] nodeadm[1988]: SDK 2026/07/09 19:17:10 DEBUG retrying request EC2/DescribeInstances, attempt 11
+[  488.963430] nodeadm[1988]: SDK 2026/07/09 19:18:00 DEBUG retrying request EC2/DescribeInstances, attempt 12
+[  538.964117] nodeadm[1988]: SDK 2026/07/09 19:18:50 DEBUG retrying request EC2/DescribeInstances, attempt 13
+[  588.983825] nodeadm[1988]: SDK 2026/07/09 19:19:40 DEBUG retrying request EC2/DescribeInstances, attempt 14
+[  607.085774] nodeadm[1988]: SDK 2026/07/09 19:19:58 DEBUG request failed with unretryable error https response error StatusCode: 0, RequestID: , canceled, context deadline exceeded
+[  607.089628] nodeadm[1988]: fatal cli/main.go:35 Command failed {"error": "expected err to be of type smithy.APIError, got operation error EC2: DescribeInstances, https response error StatusCode: 0, RequestID: , canceled, context deadline exceeded"}
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mnodeadm-co….service[0m - EKS Nodeadm Config.
+[[0;1;38;5;185mDEPEND[0m] Dependency failed for [0;1;39mnode…run.service[0m - EKS Nodeadm Run.
+[  609.889812] cloud-init[1999]: Cloud-init v. 22.2.2 running 'init' at Thu, 09 Jul 2026 19:20:01 +0000. Up 609.85 seconds.
+[  609.984775] cloud-init[1999]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+[  609.988937] cloud-init[1999]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[  609.995147] cloud-init[1999]: ci-info: | Device |  Up  |          Address           |      Mask     | Scope  |     Hw-Address    |
+[  609.997870] cloud-init[1999]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[  610.000525] cloud-init[1999]: ci-info: |  ens5  | True |         10.1.10.91         | 255.255.255.0 | global | 02:4d:97:4b:b2:e7 |
+[  610.003636] cloud-init[1999]: ci-info: |  ens5  | True | fe80::4d:97ff:fe4b:b2e7/64 |       .       |  link  | 02:4d:97:4b:b2:e7 |
+[  610.006377] cloud-init[1999]: ci-info: |   lo   | True |         127.0.0.1          |   255.0.0.0   |  host  |         .         |
+[  610.009056] cloud-init[1999]: ci-info: |   lo   | True |          ::1/128           |       .       |  host  |         .         |
+[  610.012031] cloud-init[1999]: ci-info: +--------+------+----------------------------+---------------+--------+-------------------+
+[  610.014637] cloud-init[1999]: ci-info: +++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+[  610.016942] cloud-init[1999]: ci-info: +-------+-------------+-----------+-----------------+-----------+-------+
+[  610.019388] cloud-init[1999]: ci-info: | Route | Destination |  Gateway  |     Genmask     | Interface | Flags |
+[  610.021772] cloud-init[1999]: ci-info: +-------+-------------+-----------+-----------------+-----------+-------+
+[  610.023991] cloud-init[1999]: ci-info: |   0   |   0.0.0.0   | 10.1.10.1 |     0.0.0.0     |    ens5   |   UG  |
+[  610.026597] cloud-init[1999]: ci-info: |   1   |   10.1.0.2  | 10.1.10.1 | 255.255.255.255 |    ens5   |  UGH  |
+[  610.030370] cloud-init[1999]: ci-info: |   2   |  10.1.10.0  |  0.0.0.0  |  255.255.255.0  |    ens5   |   U   |
+[  610.033512] cloud-init[1999]: ci-info: |   3   |  10.1.10.1  |  0.0.0.0  | 255.255.255.255 |    ens5   |   UH  |
+[  610.040865] cloud-init[1999]: ci-info: +-------+-------------+-----------+-----------------+-----------+-------+
+[  610.043135] cloud-init[1999]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+[  610.045651] cloud-init[1999]: ci-info: +-------+-------------+---------+-----------+-------+
+[  610.055357] cloud-init[1999]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+[  610.058237] cloud-init[1999]: ci-info: +-------+-------------+---------+-----------+-------+
+[  610.060823] cloud-init[1999]: ci-info: |   0   |  fe80::/64  |    ::   |    ens5   |   U   |
+[  610.063977] cloud-init[1999]: ci-info: |   2   |    local    |    ::   |    ens5   |   U   |
+[  610.067957] cloud-init[1999]: ci-info: |   3   |  multicast  |    ::   |    ens5   |   U   |
+[  610.070861] cloud-init[1999]: ci-info: +-------+-------------+---------+-----------+-------+
+[  610.807529] cloud-init[1999]: 2026-07-09 19:20:02,088 - __init__.py[WARNING]: Unhandled unknown content-type (application/node.eks.aws) userdata: 'b'---'...'
+[  611.646267] cloud-init[1999]: Generating public/private ed25519 key pair.
+[  611.647975] cloud-init[1999]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key
+[  611.650123] cloud-init[1999]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub
+[  611.652113] cloud-init[1999]: The key fingerprint is:
+[  611.653289] cloud-init[1999]: SHA256:Z6IM3DP6E545L3oHya1IB/nYnHFS+crWMVdpbrbNvFY root@ip-10-1-10-91.ec2.internal
+[  611.655502] cloud-init[1999]: The key's randomart image is:
+[  611.656876] cloud-init[1999]: +--[ED25519 256]--+
+[  611.658176] cloud-init[1999]: |         .     . |
+[  611.659314] cloud-init[1999]: |        o     +  |
+[  611.660543] cloud-init[1999]: |     . . .   +   |
+[  611.661634] cloud-init[1999]: |   .o.o . + . +  |
+[  611.662803] cloud-init[1999]: |    oB+OSoo+ o = |
+[  611.663925] cloud-init[1999]: |    o+@+=+.   . E|
+[  611.665126] cloud-init[1999]: |   ..+oB        o|
+[  611.666289] cloud-init[1999]: |    ..X .      o |
+[  611.668106] cloud-init[1999]: |    .o.*.     .  |
+[  611.669858] cloud-init[1999]: +----[SHA256]-----+
+[  611.671099] cloud-init[1999]: Generating public/private ecdsa key pair.
+[  611.672741] cloud-init[1999]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key
+[  611.674833] cloud-init[1999]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub
+[  611.676910] cloud-init[1999]: The key fingerprint is:
+[  611.678219] cloud-init[1999]: SHA256:FJve50e9RvRofm/CE5CBvatBNtFhRkPQl1rPtVTJOtU root@ip-10-1-10-91.ec2.internal
+[  611.680767] cloud-init[1999]: The key's randomart image is:
+[  611.682135] cloud-init[1999]: +---[ECDSA 256]---+
+[  611.683328] cloud-init[1999]: |        . .OB...=|
+[  611.684609] cloud-init[1999]: |         +oo=.+=E|
+[  611.685829] cloud-init[1999]: |        +  . B++o|
+[  611.687006] cloud-init[1999]: |       o .+ =o.++|
+[  611.688287] cloud-init[1999]: |        So...o=.o|
+[  611.689507] cloud-init[1999]: |          .o.+o .|
+[  611.690761] cloud-init[1999]: |           o..o+.|
+[  611.691959] cloud-init[1999]: |          .  .=.o|
+[  611.693248] cloud-init[1999]: |               +.|
+[  611.694431] cloud-init[1999]: +----[SHA256]-----+
+[  612.172587] cloud-init[2067]: Cloud-init v. 22.2.2 running 'modules:config' at Thu, 09 Jul 2026 19:20:03 +0000. Up 612.11 seconds.
+[  612.696457] cloud-init[2082]: Cloud-init v. 22.2.2 running 'modules:final' at Thu, 09 Jul 2026 19:20:03 +0000. Up 612.63 seconds.
+ci-info: no authorized SSH keys fingerprints found for user ec2-user.
+<14>Jul  9 19:20:04 cloud-init: #############################################################
+<14>Jul  9 19:20:04 cloud-init: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+<14>Jul  9 19:20:04 cloud-init: 256 SHA256:FJve50e9RvRofm/CE5CBvatBNtFhRkPQl1rPtVTJOtU root@ip-10-1-10-91.ec2.internal (ECDSA)
+<14>Jul  9 19:20:04 cloud-init: 256 SHA256:Z6IM3DP6E545L3oHya1IB/nYnHFS+crWMVdpbrbNvFY root@ip-10-1-10-91.ec2.internal (ED25519)
+<14>Jul  9 19:20:04 cloud-init: -----END SSH HOST KEY FINGERPRINTS-----
+<14>Jul  9 19:20:04 cloud-init: #############################################################
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDUrvLR2eGxNTteXREjz2Cyq1HsiIEKaMTX0Fn0HIMgkbCnCn0NsxcB6H85/17mQYPxmh8b6vGvRZSKWbSZUcUc= root@ip-10-1-10-91.ec2.internal
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJXhVX2q2tFsQdzo+hG+YiAhlr/sG/uhQP36cqN6PynN root@ip-10-1-10-91.ec2.internal
+-----END SSH HOST KEY KEYS-----
+[  612.844687] cloud-init[2082]: Cloud-init v. 22.2.2 finished at Thu, 09 Jul 2026 19:20:04 +0000. Datasource DataSourceEc2.  Up 612.83 seconds
+
+Amazon Linux 2023.12.20260622
+Kernel 6.12.92-122.166.amzn2023.x86_64 on an x86_64 (-)
+
+ip-10-1-10-91 login: 2026/07/09 19:24:24Z: SSM Agent unable to acquire credentials: <error>unexpected error getting instance profile role credentials or calling UpdateInstanceInformation. Skipping default host management fallback: retrieved credentials failed to report to ssm. Error: RequestError: send request failed
+caused by: Post "https://ssm.us-east-1.amazonaws.com/": dial tcp 13.220.37.233:443: i/o timeout</error>
+	2026-07-09T20:32:43+00:00
