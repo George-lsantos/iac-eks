@@ -57,3 +57,10 @@ variable "admin_principal_arns" {
   type    = list(string)
   default = []
 }
+
+
+variable "cluster_name" {
+  type        = string
+  description = "EKS Cluster name"
+  default     = "iac-eks"
+}
