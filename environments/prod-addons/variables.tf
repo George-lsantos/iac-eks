@@ -16,3 +16,8 @@ variable "cluster_state_key" {
 variable "cluster_state_region" {
   type = string
 }
+
+
+variable "cluster_name" {
+  type = string
+}
