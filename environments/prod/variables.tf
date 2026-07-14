@@ -1,4 +1,3 @@
-
 variable "project_name" {
   type = string
 }
@@ -22,7 +21,6 @@ variable "public_subnets" {
     availability_zone = string
   }))
 }
-
 
 variable "private_subnets" {
   type = list(object({
@@ -57,7 +55,6 @@ variable "admin_principal_arns" {
   type    = list(string)
   default = []
 }
-
 
 variable "cluster_name" {
   type        = string

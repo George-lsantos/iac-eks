@@ -1,17 +1,15 @@
 resource "helm_release" "metrics_server" {
   name       = "metrics-server"
-  repository = "https://charts.bitnami.com/bitnami"
+  repository = "https://kubernetes-sigs.github.io/metrics-server/"
   chart      = "metrics-server"
 
-  namespace        = "kube-system"
-  create_namespace = false
+  namespace = "kube-system"
 
-  version = "7.2.16"
-
-  wait = true
-
-  set {
-    name  = "apiService.create"
-    value = "true"
-  }
+  values = [
+    yamlencode({
+      args = [
+        "--kubelet-insecure-tls"
+      ]
+    })
+  ]
 }

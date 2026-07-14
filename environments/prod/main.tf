@@ -31,3 +31,7 @@ module "eks" {
 
   admin_principal_arns = var.admin_principal_arns
 }
+
+module "monitoring" {
+  source = "../../modules/monitoring"
+}

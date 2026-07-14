@@ -29,19 +29,19 @@ variable "node_instance_types" {
 variable "node_desired_size" {
   type = number
 
-  default = 2
+  default = 3
 }
 
 variable "node_min_size" {
   type = number
 
-  default = 2
+  default = 3
 }
 
 variable "node_max_size" {
   type = number
 
-  default = 4
+  default = 6
 }
 
 # --- Custom networking (pods em subnets/CIDR dedicados) ---
@@ -59,18 +59,3 @@ variable "admin_principal_arns" {
   type        = list(string)
   default     = []
 }
-
-
-variable "addon_coredns_version" {
-  type        = string
-  default     = ""
-  description = "CoreDNS addon version"
-}
-
-variable "addon_kubeproxy_version" {
-  type        = string
-  default     = ""
-  description = "Kube Proxy addon version"
-}
-
-
